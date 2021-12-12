@@ -3,25 +3,12 @@
   font-family: Ubuntu, sans-serif;
 }
 
-
+html,
 body {
+  height: 100%;
   padding: 0;
   margin: 0;
 }
-
-/* set map, body, and html to 100% of the screen size */
-
-html, body { 
-  height:100%
-}
-.map-container {
-  float: none;
-  display: table-cell;
-  height:0;
-}
-#map {
-  height:100%;
-}    
 
 /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
 .wrapper {
@@ -29,6 +16,11 @@ html, body {
   min-height: 100%;
   padding-bottom: 130px;
   overflow: auto;
+}
+
+/* The legend list items to be displayed side by side */
+#legend ul li {
+  display: inline;
 }
 
 /* The footer is positioned at the bottom of the page */
@@ -111,7 +103,7 @@ select {
   padding: 20px;
   margin: 0;
   background: black;
-  background-image: url("../img/nasa.jpg");
+  background-image: url("../images/ufo.jpg");
   background-attachment: fixed;
   background-position: bottom center;
   background-size: cover;
@@ -153,52 +145,6 @@ select {
 
 /* media queries which will only be activated at specific screen sizes */
 @media (max-width: 800px) {
-  #table-area td {
-    font-size: 1em;
-  }
-}
-
-@media (max-width: 500px) {
-  #table-area thead {
-    display: none;
-  }
-
-  #table-area tr td:first-child {
-    font-size: 1.8em;
-    font-weight: bold;
-    background: #1b3146;
-  }
-
-  #table-area tr td:last-child {
-    margin-bottom: 20px;
-  }
-
-  #table-area tr td:last-child::after {
-    display: block;
-    width: 100%;
-    height: 1px;
-    margin-top: 20px;
-    content: " ";
-    background: aliceblue;
-  }
-
-  #table-area td {
-    font-size: 1.25em;
-  }
-
-  #table-area tbody td {
-    display: block;
-    text-align: center;
-  }
-
-  #table-area tbody td::before {
-    display: block;
-    font-size: 1.4em;
-    font-weight: bold;
-    text-align: center;
-    content: attr(data-th);
-  }
-
   .hero h1 {
     animation: smaller-title 1.2s forwards linear;
   }
@@ -236,37 +182,3 @@ select {
     opacity: 1;
   }
 }
-
-
-.circle
-{
-float: left;
-border: 1px solid #222;
-border-radius: 50%;
-}
-.info
- {
-        padding: 10px 10px;
-        font: 14px/16px Verdana, Geneva, sans-serif;
-        background: white;
-        background: rgba(255,255,255,0.8);
-        box-shadow: 0 0 15px rgba(0,0,0,0.2);
-        border-radius: 5px;
- }
-
-.legend {
-        line-height: 20px;
-        color: #555;
-    }
-
-.legend i {
-        width: 20px;
-        height: 20px;
-        float: left;
-        margin-right: 8px;
-        opacity: 0.9;
-    }
-#rectangle{
-      width:20px;
-      height:20px;
-  }
