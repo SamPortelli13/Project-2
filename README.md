@@ -1,7 +1,7 @@
 # Project-2
 
 ### Instructions for running the UFO Sightings application
-### ------------------------------------------------------------------------------
+### -------------------------------------------------------
 ####  1.  Unzip the file ufo_reports_raw.zip in the static > Resources folder and store the csv file there.
 ####  2.  In Postgres, create the database called ufo_db and create the tables using the schema.sql sql statements.
 ####  3. Run the two jupyter notebooks one after the other to transform the csv data into a Postgres database.  First run the cleaning.ipynb notebook followed by the loading.ipynb notebook. At the end of processing these two notebooks, the Postres database will then be available 
