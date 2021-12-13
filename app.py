@@ -5,8 +5,12 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, inspect, func
 import json
+from datetime import datetime
+from pathlib import Path
 
+import time
 
+  
 # Database Setup
 connection_string = "postgres:Golfer7!@localhost:5432/ufo_db"
 engine = create_engine(f'postgresql://{connection_string}')
@@ -18,7 +22,7 @@ Base = automap_base()
 Base.prepare(engine, reflect=True)
 
 # Save reference to the table
-usa_table = Base.classes.usa_ufo
+ufo_table = Base.classes.all_countries_ufos
 
 # Flask Routes
 
@@ -26,23 +30,55 @@ app = Flask(__name__)
 
 @app.route("/")
 def welcome():
-    return render_template("dashboard.html")
-#    """Available api route."""
-#    return (
-#        f"Web site for Serving UFO data is up and running!<br/><br/>"
-#        f"Available Route:<br/>"
-#        f"/data"
-#    )
+    return render_template("index.html")
+
+
 
 @app.route("/map")
 def map():
+    # File path setup & transfer of filtered file
+    from pathlib import Path
+    src_files_loc = Path("/Users/sampo/downloads")
+    dest_files_loc = Path("./static/Resources")
+    print("source files: ", src_files_loc)
+    print("dest files: ", dest_files_loc)
+    for file in src_files_loc.iterdir():
+        if (file.stem == "filtered"): 
+            print("found filtered: ",file.stem,"  suffix: ", file.suffix)
+            new_file_path = dest_files_loc.joinpath(f"{file.stem}{file.suffix}")
+            print("new file path-name: ",new_file_path)
+            file.replace(new_file_path)
+
+
     return render_template("map.html")
 
+@app.route("/charts")
+def charts():
+    # File path setup & transfer of filtered file
+
+    return render_template("charts.html")
+
+
+@app.route("/movefile")
+def movefile():
+    # File path setup & transfer of filtered file
+    from pathlib import Path
+    src_files_loc = Path("/Users/sampo/downloads")
+    dest_files_loc = Path("./static/Resources")
+    print("source files: ", src_files_loc)
+    print("dest files: ", dest_files_loc)
+    for file in src_files_loc.iterdir():
+        if (file.stem == "filtered"): 
+            print("found filtered: ",file.stem,"  suffix: ", file.suffix)
+            new_file_path = dest_files_loc.joinpath(f"{file.stem}{file.suffix}")
+            print("new file path-name: ",new_file_path)
+            file.replace(new_file_path)
+    return ("Move done")
 
 @app.route("/data")
 def data(): 
 
-    query = engine.execute('SELECT row_to_json(t) FROM (select city, city_latitude, city_longitude, date, duration, state, shape, summary, time from usa_ufo) t LIMIT 5000').fetchall()
+    query = engine.execute('SELECT row_to_json(t) FROM (select country, city, city_latitude, city_longitude, date, duration, state, shape, summary, time from all_countries_ufos) t LIMIT 10000').fetchall()
 #    query = engine.execute('SELECT row_to_json(usa_ufo) FROM usa_ufo LIMIT 100').fetchall()
     my_list = []
 

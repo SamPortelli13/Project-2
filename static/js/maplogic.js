@@ -30,11 +30,14 @@ var layers = {
   circle: new L.LayerGroup(),
   unknown: new L.LayerGroup()
 };
+map_lat=35.09;
+map_long=-96.71;
+map_zoom=5;
 
 // Create the map with our layers
 var map = L.map("map-id", {
-  center: [35.09, -96.71],
-  zoom: 5,
+  center: [map_lat, map_long],
+  zoom: map_zoom,
   layers: [
     layers.changing,
     layers.chevron,
@@ -87,6 +90,8 @@ var overlays = {
   "triangle Ufos": layers.triangle,
   "unknown Ufos": layers.unknown
 };
+
+
 
 // Create a control for our layers, add our overlay layers to it
 L.control.layers(null, overlays, {collapsed:false}).addTo(map);
@@ -277,9 +282,12 @@ d3.json(url).then(function(sighting) {
   var ufoshape;
   var ufoInfo = sighting;
 
+  map_lat=sighting[1].city_latitude;
+  map_long=sighting[1].city_longitude;
+  map.flyTo([map_lat, map_long],5);
+
   // Loop through the ufos (they're the same size and have partially matching data)
   for (var i = 0; i < ufoInfo.length; i++) {
-
     var ufo_city = sighting[i].city;
     var ufo_shape = sighting[i].shape;
     var city_lat = sighting[i].city_latitude;
@@ -319,27 +327,27 @@ d3.json(url).then(function(sighting) {
 // Update the legend's innerHTML with the last updated time and ufo count
 function updateLegend(time, ufoCount) {
   document.querySelector(".legend").innerHTML = [
-    "<h3>Updated: " + time + "</h3>",
-    "<p class='changing'>Changing ufos: " + ufoCount.changing + "</p>",
-    "<p class='chevron'>Chevron ufos: " + ufoCount.chevron + "</p>",
-    "<p class='cigar'>Cigar ufos: " + ufoCount.cigar + "</p>",
-    "<p class='circle'>Circle ufos: " + ufoCount.circle + "</p>",
-    "<p class='cone'>Cone ufos: " + ufoCount.cone + "</p>",
-    "<p class='cross'>Cross ufos: " + ufoCount.cross + "</p>",
-    "<p class='cylinder'>Cylinder ufos: " + ufoCount.cylinder + "</p>", 
-    "<p class='diamond'>Diamond ufos: " + ufoCount.diamond + "</p>",    
-    "<p class='disk'>Disk ufos: " + ufoCount.disk + "</p>",
-    "<p class='egg'>Egg ufos: " + ufoCount.egg + "</p>",
-    "<p class='fireball'>Fireball ufos: " + ufoCount.fireball + "</p>",
-    "<p class='flash'>Flash ufos: " + ufoCount.flash + "</p>",    
-    "<p class='formation'>Formation ufos: " + ufoCount.formation + "</p>",
-    "<p class='light'>Light ufos: " + ufoCount.light + "</p>",
-    "<p class='other'>Other ufos: " + ufoCount.other + "</p>",
-    "<p class='oval'>Oval ufos: " + ufoCount.oval + "</p>",
-    "<p class='rectangle'>Rectangle ufos: " + ufoCount.rectangle + "</p>",
-    "<p class='sphere'>Sphere ufos: " + ufoCount.sphere + "</p>",
-    "<p class='teardrop'>Teardrop ufos: " + ufoCount.teardrop + "</p>",
-    "<p class='triangle'>Triangle ufos: " + ufoCount.triangle + "</p>",
-    "<p class='unknown'>Unknown ufos: " + ufoCount.unknown + "</p>"
+    "<h5>Updated: " + time + "</h5>",
+    "<p>Changing ufos: " + ufoCount.changing + "</p>",
+    "<p>Chevron ufos: " + ufoCount.chevron + "</p>",
+    "<p>Cigar ufos: " + ufoCount.cigar + "</p>",
+    "<p>Circle ufos: " + ufoCount.circle + "</p>",
+    "<p>Cone ufos: " + ufoCount.cone + "</p>",
+    "<p>Cross ufos: " + ufoCount.cross + "</p>",
+    "<p>Cylinder ufos: " + ufoCount.cylinder + "</p>", 
+    "<p>Diamond ufos: " + ufoCount.diamond + "</p>",    
+    "<p>Disk ufos: " + ufoCount.disk + "</p>",
+    "<p>Egg ufos: " + ufoCount.egg + "</p>",
+    "<p>Fireball ufos: " + ufoCount.fireball + "</p>",
+    "<p>Flash ufos: " + ufoCount.flash + "</p>",    
+    "<p>Formation ufos: " + ufoCount.formation + "</p>",
+    "<p>Light ufos: " + ufoCount.light + "</p>",
+    "<p>Other ufos: " + ufoCount.other + "</p>",
+    "<p>Oval ufos: " + ufoCount.oval + "</p>",
+    "<p>Rectangle ufos: " + ufoCount.rectangle + "</p>",
+    "<p>Sphere ufos: " + ufoCount.sphere + "</p>",
+    "<p>Teardrop ufos: " + ufoCount.teardrop + "</p>",
+    "<p>Triangle ufos: " + ufoCount.triangle + "</p>",
+    "<p>Unknown ufos: " + ufoCount.unknown + "</p>"
   ].join("");
 }

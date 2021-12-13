@@ -123,13 +123,13 @@ button.on("click",function() {
                 matchesDay_night = true;
             }
             // If user has entered a value to the country field, check if it is included in the data
-            // if (inputValue_country != '' && sightings.country == inputValue_country.toLowerCase()) {
-            //     matchesCountry = true;
-            // }
-            // // If the user didn't enter anything in the country field, set match to true by default
-            // if (inputValue_country == '') {
-            //     matchesCountry = true;
-            // }
+            if (inputValue_country != '' && sightings.country == inputValue_country) {
+                matchesCountry = true;
+            }
+            // If the user didn't enter anything in the country field, set match to true by default
+            if (inputValue_country == '') {
+                matchesCountry = true;
+            }
             // If user has entered a value to the shape field, check if it is included in the data
             if (inputValue_shape != '' && sightings.shape == inputValue_shape) {
                 matchesShape = true;
@@ -140,7 +140,7 @@ button.on("click",function() {
             }
 
             // Will return true if all fields match
-            return matchesYear && matchesState && matchesCity && matchesShape && matchesDay_night;
+            return matchesYear && matchesState && matchesCity && matchesShape && matchesDay_night && matchesCountry;
 
         });
 
@@ -184,6 +184,14 @@ button.on("click",function() {
 
 
         saveToFile(filteredData);
+
+        // Relocate the file that has been created from Downloads to Resources
+        const move_url = "/movefile";
+        console.log("Movefile URL: ",move_url);
+        d3.json(move_url).then(function(response) {  
+            console.log("data:",response);
+        });
+
 
         function saveToFile() {
 

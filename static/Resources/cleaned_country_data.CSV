@@ -1,0 +1,247 @@
+country_id,country_abbreviation,country_name
+12,DZ,Algeria
+818,EG,Egypt
+434,LY,Libya
+504,MA,Morocco
+729,SD,Sudan
+788,TN,Tunisia
+732,EH,Western Sahara
+86,IO,British Indian Ocean Territory
+108,BI,Burundi
+174,KM,Comoros
+262,DJ,Djibouti
+232,ER,Eritrea
+231,ET,Ethiopia
+260,TF,French Southern Territories
+404,KE,Kenya
+450,MG,Madagascar
+454,MW,Malawi
+480,MU,Mauritius
+175,YT,Mayotte
+508,MZ,Mozambique
+638,RE,Réunion
+646,RW,Rwanda
+690,SC,Seychelles
+706,SO,Somalia
+728,SS,South Sudan
+800,UG,Uganda
+834,TZ,United Republic of Tanzania
+894,ZM,Zambia
+716,ZW,Zimbabwe
+24,AO,Angola
+120,CM,Cameroon
+140,CF,Central African Republic
+148,TD,Chad
+178,CG,Congo
+180,CD,Democratic Republic of the Congo
+226,GQ,Equatorial Guinea
+266,GA,Gabon
+678,ST,Sao Tome and Principe
+72,BW,Botswana
+748,SZ,Eswatini
+426,LS,Lesotho
+516,,Namibia
+710,ZA,South Africa
+204,BJ,Benin
+854,BF,Burkina Faso
+132,CV,Cabo Verde
+384,CI,Côte d’Ivoire
+270,GM,Gambia
+288,GH,Ghana
+324,GN,Guinea
+624,GW,Guinea-Bissau
+430,LR,Liberia
+466,ML,Mali
+478,MR,Mauritania
+562,NE,Niger
+566,NG,Nigeria
+654,SH,Saint Helena
+686,SN,Senegal
+694,SL,Sierra Leone
+768,TG,Togo
+660,AI,Anguilla
+28,AG,Antigua and Barbuda
+533,AW,Aruba
+44,BS,Bahamas
+52,BB,Barbados
+92,VG,British Virgin Islands
+136,KY,Cayman Islands
+192,CU,Cuba
+531,CW,Curaçao
+212,DM,Dominica
+214,DO,Dominican Republic
+308,GD,Grenada
+312,GP,Guadeloupe
+332,HT,Haiti
+388,JM,Jamaica
+474,MQ,Martinique
+500,MS,Montserrat
+630,PR,Puerto Rico
+652,BL,Saint Barthélemy
+659,KN,Saint Kitts and Nevis
+662,LC,Saint Lucia
+663,MF,Saint Martin (French Part)
+670,VC,Saint Vincent and the Grenadines
+534,SX,Sint Maarten (Dutch part)
+780,TT,Trinidad and Tobago
+796,TC,Turks and Caicos Islands
+850,VI,United States Virgin Islands
+84,BZ,Belize
+188,CR,Costa Rica
+222,SV,El Salvador
+320,GT,Guatemala
+340,HN,Honduras
+484,MX,Mexico
+558,NI,Nicaragua
+591,PA,Panama
+32,AR,Argentina
+68,BO,Bolivia (Plurinational State of)
+74,BV,Bouvet Island
+76,BR,Brazil
+152,CL,Chile
+170,CO,Colombia
+218,EC,Ecuador
+238,FK,Falkland Islands (Malvinas)
+254,GF,French Guiana
+328,GY,Guyana
+600,PY,Paraguay
+604,PE,Peru
+239,GS,South Georgia and the South Sandwich Islands
+740,SR,Suriname
+858,UY,Uruguay
+862,VE,Venezuela (Bolivarian Republic of)
+60,BM,Bermuda
+124,CA,Canada
+304,GL,Greenland
+666,PM,Saint Pierre and Miquelon
+840,US,United States of America
+10,AQ,Antarctica
+398,KZ,Kazakhstan
+417,KG,Kyrgyzstan
+762,TJ,Tajikistan
+795,TM,Turkmenistan
+860,UZ,Uzbekistan
+156,CN,China
+408,KP,Democratic People's Republic of Korea
+392,JP,Japan
+496,MN,Mongolia
+410,KR,Republic of Korea
+96,BN,Brunei Darussalam
+116,KH,Cambodia
+360,ID,Indonesia
+418,LA,Lao People's Democratic Republic
+458,MY,Malaysia
+104,MM,Myanmar
+608,PH,Philippines
+702,SG,Singapore
+764,TH,Thailand
+626,TL,Timor-Leste
+704,VN,Viet Nam
+4,AF,Afghanistan
+50,BD,Bangladesh
+64,BT,Bhutan
+356,IN,India
+364,IR,Iran (Islamic Republic of)
+462,MV,Maldives
+524,NP,Nepal
+586,PK,Pakistan
+144,LK,Sri Lanka
+51,AM,Armenia
+31,AZ,Azerbaijan
+48,BH,Bahrain
+196,CY,Cyprus
+268,GE,Georgia
+368,IQ,Iraq
+376,IL,Israel
+400,JO,Jordan
+414,KW,Kuwait
+422,LB,Lebanon
+512,OM,Oman
+634,QA,Qatar
+682,SA,Saudi Arabia
+275,PS,State of Palestine
+760,SY,Syrian Arab Republic
+792,TR,Turkey
+784,AE,United Arab Emirates
+887,YE,Yemen
+112,BY,Belarus
+100,BG,Bulgaria
+203,CZ,Czechia
+348,HU,Hungary
+616,PL,Poland
+498,MD,Republic of Moldova
+642,RO,Romania
+643,RU,Russian Federation
+703,SK,Slovakia
+804,UA,Ukraine
+248,AX,Åland Islands
+831,GG,Guernsey
+832,JE,Jersey
+680,,Sark
+208,DK,Denmark
+233,EE,Estonia
+234,FO,Faroe Islands
+246,FI,Finland
+352,IS,Iceland
+372,IE,Ireland
+833,IM,Isle of Man
+428,LV,Latvia
+440,LT,Lithuania
+578,NO,Norway
+744,SJ,Svalbard and Jan Mayen Islands
+752,SE,Sweden
+826,GB,United Kingdom of Great Britain and Northern Ireland
+8,AL,Albania
+20,AD,Andorra
+70,BA,Bosnia and Herzegovina
+191,HR,Croatia
+292,GI,Gibraltar
+300,GR,Greece
+336,VA,Holy See
+380,IT,Italy
+470,MT,Malta
+499,ME,Montenegro
+807,MK,North Macedonia
+620,PT,Portugal
+674,SM,San Marino
+688,RS,Serbia
+705,SI,Slovenia
+724,ES,Spain
+40,AT,Austria
+56,BE,Belgium
+250,FR,France
+276,DE,Germany
+438,LI,Liechtenstein
+442,LU,Luxembourg
+492,MC,Monaco
+528,NL,Netherlands
+756,CH,Switzerland
+36,AU,Australia
+162,CX,Christmas Island
+166,CC,Cocos (Keeling) Islands
+334,HM,Heard Island and McDonald Islands
+554,NZ,New Zealand
+574,NF,Norfolk Island
+242,FJ,Fiji
+540,NC,New Caledonia
+598,PG,Papua New Guinea
+90,SB,Solomon Islands
+548,VU,Vanuatu
+316,GU,Guam
+296,KI,Kiribati
+584,MH,Marshall Islands
+583,FM,Micronesia (Federated States of)
+520,NR,Nauru
+580,MP,Northern Mariana Islands
+585,PW,Palau
+581,UM,United States Minor Outlying Islands
+16,AS,American Samoa
+184,CK,Cook Islands
+258,PF,French Polynesia
+570,NU,Niue
+612,PN,Pitcairn
+882,WS,Samoa
+772,TK,Tokelau
+776,TO,Tonga
+798,TV,Tuvalu
+876,WF,Wallis and Futuna Islands

@@ -3,25 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <title>Map UFOs</title>
-
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
 
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-  crossorigin=""/>
+  crossorigin="">
 
   <!-- Icons -->
   <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="../static/css/leaflet.extra-markers.min.css">
 
   <!-- Our CSS -->
+  <link rel="stylesheet" href="../static/css/style.css">
   <link rel="stylesheet" type="text/css" href="../static/css/mapstyle.css">
 </head>
 
 <body>
-
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">UFO Sightings
+          <img class="nav-ufo" src="../static/img/ufo.svg">
+        </a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/map">Map</a></li>
+        <li><a href="/charts">Charts</a></li>
+        <!-- <li><a href="#">Annual Sightings</a></li>
+        <li><a href="#">Shapes</a></li>   -->
+      </ul>
+    </div><!-- /.container-fluid -->
+  </nav>
   <!-- The div that holds our map -->
   <div id="map-id"></div>
 
